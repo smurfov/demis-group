@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
 
-        a{
+        a {
             text-decoration: none;
         }
 
-        .back{
+        .back {
             width: 200px;
             height: 200px;
             background-color: brown;
             position: relative;
         }
 
-        .back::after{
+        .back::after {
             content: "";
             border: 20px solid transparent;
             border-left: 35px solid green;
@@ -33,7 +34,7 @@
             left: 50%;
         }
 
-        .modal-back{
+        .modal-back {
             background-color: rgba(0, 0, 0, .5);
             width: 100%;
             height: 100%;
@@ -46,7 +47,7 @@
             left: 0;
         }
 
-        .modal-content{
+        .modal-content {
             width: 500px;
             height: 500px;
             display: flex;
@@ -69,10 +70,12 @@
         }
     </style>
 </head>
+
 <body>
     <a href="#" id="link">
         <div class="back"></div>
     </a>
     <script src="main.js"></script>
 </body>
+
 </html>
