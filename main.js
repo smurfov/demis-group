@@ -7,19 +7,19 @@ myModal.classList.add('modal-back');
 
 link.addEventListener('click', function (e) {
     e.preventDefault();
-    addVideo();
     body.append(myModal);
+    video.play();
 })
 
 const modalContent = document.createElement('div');
 modalContent.classList.add('modal-content');
 myModal.append(modalContent);
-
-function addVideo() {
-    const video = `<video src="${url}" class="modal-video" autoplay muted preload="auto"></video>`;
-    modalContent.insertAdjacentHTML('beforeend', video);
-}
-
+const video = document.createElement('video');
+video.setAttribute('src', url);
+video.classList.add('modal-video');
+video.setAttribute('autoplay', '');
+video.setAttribute('preload', 'auto');
+modalContent.append(video);
 const closeLink = document.createElement('a');
 closeLink.classList.add('close');
 closeLink.textContent = 'x';
@@ -28,10 +28,12 @@ myModal.append(closeLink);
 closeLink.addEventListener('click', function (e) {
     e.preventDefault();
     myModal.remove();
+    video.currentTime = 0;
 })
 
 window.addEventListener('click', function (e) {
     if (e.target == myModal) {
         myModal.remove();
+        video.currentTime = 0;
     }
 })
