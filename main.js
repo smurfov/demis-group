@@ -1,4 +1,4 @@
-const url = "video.mp4";
+const url = "https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1";
 const link = document.querySelector('#link');
 const body = document.querySelector('body');
 
@@ -14,11 +14,12 @@ link.addEventListener('click', function (e) {
 const modalContent = document.createElement('div');
 modalContent.classList.add('modal-content');
 myModal.append(modalContent);
-const video = document.createElement('video');
+const video = document.createElement('iframe');
 video.setAttribute('src', url);
 video.classList.add('modal-video');
-video.setAttribute('autoplay', '');
-video.setAttribute('preload', 'auto');
+video.setAttribute('frameborder', 0);
+// video.setAttribute('autoplay', '');
+// video.setAttribute('preload', 'auto');
 modalContent.append(video);
 const closeLink = document.createElement('a');
 closeLink.classList.add('close');
