@@ -18,8 +18,6 @@ const video = document.createElement('iframe');
 video.setAttribute('src', url);
 video.classList.add('modal-video');
 video.setAttribute('frameborder', 0);
-// video.setAttribute('autoplay', '');
-// video.setAttribute('preload', 'auto');
 modalContent.append(video);
 const closeLink = document.createElement('a');
 closeLink.classList.add('close');
